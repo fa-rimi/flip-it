@@ -62,6 +62,8 @@ function createGameBoard(row, column) {
   // Clear the current game board
   gameboard.innerHTML = "";
 
+  // Gotta figure out a way to make an array of colors and shuffle them around for every new game
+
   // Calculate the total number of cards
   const totalCards = row * column;
 
@@ -71,4 +73,10 @@ function createGameBoard(row, column) {
   // 1fr means it will take up an equal fraction of that amount of space so for example if the column and row is meant to be 4x4, each card will take up 1/4 of the row and column space
   gameboard.style.gridTemplateColumns = `repeat(${column}, 1fr)`;
   gameboard.style.gridTemplateRows = `repeat(${row}, 1fr)`;
+
+  // Create a for loop that creates new and inserts new divs based off the mode that was chosen
+  // should add a memory card
+  // with a front-face and back-face
+  // Append the front-face and back-face to the memory-card
+  // append the actual card to the gameboard
 }
