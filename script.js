@@ -64,4 +64,11 @@ function createGameBoard(row, column) {
 
   // Calculate the total number of cards
   const totalCards = row * column;
+
+  // Setting up the game board grid layout
+  // This is basically saying gameboard will have a grid style for both row and column
+  // Depending on the mode player chose the card will repeat until it meets that number amount
+  // 1fr means it will take up an equal fraction of that amount of space so for example if the column and row is meant to be 4x4, each card will take up 1/4 of the row and column space
+  gameboard.style.gridTemplateColumns = `repeat(${column}, 1fr)`;
+  gameboard.style.gridTemplateRows = `repeat(${row}, 1fr)`;
 }
